@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countery List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Countery List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>code</th>
+                <th>Countery</th>
+                <th>Region</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for code, details in countries.items %}
+            <tr>
+                <td>{{ code }}</td>
+                <td>{{ details.country }}</td>
+                <td>{{ details.region }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</html>
